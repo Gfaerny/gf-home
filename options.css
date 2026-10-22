@@ -1,0 +1,28 @@
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: #000;
+  color: #fff;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, "Roboto Mono", monospace;
+}
+
+body { padding: 48px 24px; }
+main { width: min(560px, 100%); margin: 0 auto; }
+h1 { font-size: 22px; font-weight: 400; margin: 0 0 32px; }
+label { display: block; margin: 22px 0 8px; font-size: 14px; }
+input, select, button {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 9px 10px;
+  font: inherit;
+  color: #fff;
+  background: #000;
+  border: 1px solid #fff;
+  border-radius: 0;
+}
+input:focus, select:focus, button:focus { outline: 2px solid #888; outline-offset: 2px; }
+p { color: #aaa; font-size: 12px; line-height: 1.5; }
+.actions { display: flex; align-items: center; gap: 12px; margin-top: 32px; }
+.actions button { width: auto; min-width: 120px; cursor: pointer; }
+.actions .secondary { color: #aaa; border-color: #666; }
+#status { color: #aaa; font-size: 12px; }

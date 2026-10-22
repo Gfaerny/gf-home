@@ -1,0 +1,100 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #000000;
+  color: #ffffff;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, "Roboto Mono", monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap {
+  position: relative;
+  width: min(620px, calc(100vw - 32px));
+}
+
+.search-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prompt {
+  font-size: 34px;
+  color: #ffffff;
+  user-select: none;
+  white-space: nowrap;
+}
+
+#q {
+  box-sizing: border-box;
+  flex: 1;
+  min-width: 0;
+  width: auto;
+  padding: 8px 12px;
+  font-family: inherit;
+  font-size: 16px;
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  outline: none;
+  caret-color: #ffffff;
+}
+
+#q:focus {
+  border-color: #ffffff;
+  outline: none;
+}
+
+#suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #000000;
+  border: 1px solid #ffffff;
+  border-top: none;
+  z-index: 1000;
+  max-height: 280px;
+  overflow-y: auto;
+  display: none;
+}
+
+.suggestion-item {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  font: inherit;
+  font-size: 14px;
+  text-align: left;
+  color: #aaaaaa;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.suggestion-item:hover,
+.suggestion-item.selected {
+  background: #ffffff;
+  color: #000000;
+}
+
+.suggestion-label,
+.suggestion-detail {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.suggestion-detail {
+  margin-top: 2px;
+  font-size: 11px;
+  opacity: 0.65;
+}

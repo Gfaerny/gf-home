@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "GF Custom Startpage",
+  "version": "1.0.0",
+  "description": "Custom minimal startpage and newtab with autocomplete for Iliya",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "bookmarks",
+    "history",
+    "search",
+    "storage",
+    "<all_urls>"
+  ]
+}

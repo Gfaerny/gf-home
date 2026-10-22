@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GF Custom Startpage Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <h1>GF Custom Startpage</h1>
+    <form id="settings-form">
+      <label for="prompt-text">Text before the search bar</label>
+      <input id="prompt-text" name="promptText" type="text" maxlength="40" required>
+
+      <label for="search-engine">Search engine</label>
+      <select id="search-engine" name="searchEngine">
+        <option value="bing">Bing</option>
+        <option value="google">Google</option>
+        <option value="duckduckgo">DuckDuckGo</option>
+        <option value="brave">Brave Search</option>
+        <option value="custom">Custom URL template</option>
+      </select>
+
+      <div id="custom-engine" hidden>
+        <label for="custom-search-url">Search URL template</label>
+        <input id="custom-search-url" name="customSearchUrl" type="text" inputmode="url" placeholder="https://example.com/search?q=%s">
+        <p>Use <code>%s</code> where the URL-encoded search text belongs.</p>
+      </div>
+
+      <div class="actions">
+        <button type="submit">Save settings</button>
+        <button type="button" id="reset" class="secondary">Reset</button>
+        <span id="status" role="status" aria-live="polite"></span>
+      </div>
+    </form>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>
