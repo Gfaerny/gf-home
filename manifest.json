@@ -1,8 +1,19 @@
 {
   "manifest_version": 2,
-  "name": "GF Custom Startpage",
+  "name": "gf-home",
   "version": "1.0.0",
-  "description": "Custom minimal startpage and newtab with autocomplete for Iliya",
+  "description": "Minimal homepage extension for firefox",
+  "browser_specific_settings": {
+    "gecko": {
+      "data_collection_permissions": {
+        "required": [
+          "searchTerms"
+        ]
+      },
+    "id": "gf-home@gfaerny",
+    "strict_min_version": "142.0"
+    }
+  },
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
